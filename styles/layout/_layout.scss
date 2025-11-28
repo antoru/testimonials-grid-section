@@ -1,0 +1,133 @@
+@use '../abstracts';
+
+body {
+	display: grid;
+	place-content: center;
+	min-height: 100vh;
+	padding: abstracts.$spacing-400 abstracts.$spacing-200;
+}
+
+.testimonials {
+	width: 100%;
+	max-width: 111.4rem;
+	display: grid;
+
+	grid-auto-columns: 1fr;
+
+	gap: abstracts.$spacing-400;
+
+	@include abstracts.small-device {
+		grid-template-areas:
+			'one'
+			'two'
+			'three'
+			'four'
+			'five';
+	}
+
+	@include abstracts.medium-device {
+		grid-template-areas:
+			'one one'
+			'two three'
+			'four four'
+			'five five';
+	}
+
+	@include abstracts.big-device {
+		grid-template-areas:
+			'one one two five'
+			'three four four five';
+	}
+
+	.testimonial-card {
+		border-radius: 0.8rem;
+		padding: abstracts.$spacing-400;
+		box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+		position: relative;
+
+		&:nth-of-type(1) {
+			background-color: abstracts.$purple-500;
+			color: white;
+			grid-area: one;
+		}
+		&:nth-of-type(2) {
+			background-color: abstracts.$grey-500;
+			color: white;
+			grid-area: two;
+		}
+		&:nth-of-type(3) {
+			background-color: white;
+			color: abstracts.$grey-500;
+			grid-area: three;
+		}
+		&:nth-of-type(4) {
+			background-color: abstracts.$darkBlue;
+			color: abstracts.$grey-200;
+			grid-area: four;
+		}
+		&:nth-of-type(5) {
+			background-color: white;
+			color: abstracts.$grey-500;
+			grid-area: five;
+		}
+
+		.author-info {
+			display: inline-grid;
+			align-items: center;
+			gap: abstracts.$spacing-200;
+			grid-template-columns: repeat(2, auto);
+
+			.avatar {
+				display: block;
+				width: 2.8rem;
+				height: auto;
+				border-radius: 50%;
+			}
+
+			.author-details {
+				display: grid;
+
+				strong {
+					@include abstracts.text-preset-2;
+				}
+
+				.verified {
+					@include abstracts.text-preset-4;
+				}
+			}
+		}
+
+		blockquote {
+			margin-top: abstracts.$spacing-200;
+			.highlight {
+				@include abstracts.text-preset-1;
+			}
+			.quote-text {
+				@include abstracts.text-preset-3;
+				margin-top: abstracts.$spacing-200;
+			}
+		}
+
+		.testimonial-card-bg-img {
+			position: absolute;
+
+			mix-blend-mode: lighten;
+			opacity: 0.8;
+
+			@include abstracts.small-device {
+				top: 20px;
+				right: 20px;
+			}
+
+			@include abstracts.medium-device {
+				top: 20px;
+				right: 20px;
+			}
+
+			@include abstracts.big-device {
+				top: 0;
+				right: 60px;
+			}
+		}
+	}
+}

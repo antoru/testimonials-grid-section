@@ -1,0 +1,71 @@
+// ---------------------------------------------------  //
+// This file contains all application-wide Sass mixins. //
+// ---------------------------------------------------- //
+
+@use './variables';
+
+@mixin text-preset-1 {
+	/* text-preset-1 */
+	font-family: 'Barlow Semi Condensed';
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 120%; /* 24px */
+}
+
+@mixin text-preset-2 {
+	/* text-preset-2 */
+	font-family: 'Barlow Semi Condensed';
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 110%; /* 14.3px */
+}
+
+@mixin text-preset-3 {
+	/* text-preset-3 */
+	font-family: 'Barlow Semi Condensed';
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 140%; /* 18.2px */
+}
+
+@mixin text-preset-4 {
+	/* text-preset-4 */
+	font-family: 'Barlow Semi Condensed';
+	font-size: 11px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 110%; /* 12.1px */
+}
+
+@mixin big-device {
+	@media (min-width: variables.$breakpoint-desktop-min) {
+		@content;
+	}
+}
+
+@mixin medium-device-max {
+	@media (max-width: variables.$breakpoint-tablet-max) {
+		@content;
+	}
+}
+
+@mixin medium-device {
+	@media (min-width: variables.$breakpoint-tablet-min) and (max-width: variables.$breakpoint-tablet-max) {
+		@content;
+	}
+}
+
+@mixin medium-device-min {
+	@media (min-width: variables.$breakpoint-tablet-min) {
+		@content;
+	}
+}
+
+@mixin small-device {
+	@media (max-width: variables.$breakpoint-mobile-max) {
+		@content;
+	}
+}

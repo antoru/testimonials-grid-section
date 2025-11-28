@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+// 1. Vendors
+@use 'vendors/reset';
+
+// 2. Base stuff
+@use 'base/base';
+@use 'base/fonts';
+@use 'base/helpers';
+
+// 3. Layout-related sections
+@use 'layout/layout';

@@ -1,0 +1,21 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+
+@font-face {
+	font-family: 'Barlow Semi Condensed';
+	src: url('../../fonts/BarlowSemiCondensed-Medium.woff2') format('woff2'),
+		url('../../fonts/BarlowSemiCondensed-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Barlow Semi Condensed';
+	src: url('../../fonts/BarlowSemiCondensed-SemiBold.woff2') format('woff2'),
+		url('../../fonts/BarlowSemiCondensed-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
