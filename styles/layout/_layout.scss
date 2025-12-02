@@ -121,7 +121,7 @@ body {
 		}
 
 		blockquote {
-			margin-top: abstracts.$spacing-200;
+			margin-block-start: abstracts.$spacing-200;
 			.highlight {
 				@include abstracts.text-preset-1;
 				display: block;
@@ -129,7 +129,7 @@ body {
 			.quote-text {
 				@include abstracts.text-preset-3;
 				display: block;
-				margin-top: abstracts.$spacing-200;
+				margin-block-start: abstracts.$spacing-200;
 			}
 		}
 	}
