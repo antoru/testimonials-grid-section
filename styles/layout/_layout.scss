@@ -60,7 +60,7 @@ body {
 				background-size: cover;
 				mix-blend-mode: lighten;
 				background-repeat: no-repeat;
-				background-image: url('../../images/bg-pattern-quotation.svg');
+				background-image: url('../images/bg-pattern-quotation.svg');
 
 				@include abstracts.medium-device-max {
 					top: 20px;
