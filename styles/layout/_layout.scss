@@ -49,6 +49,29 @@ body {
 			background-color: abstracts.$purple-500;
 			color: white;
 			grid-area: one;
+
+			&::before {
+				content: '';
+				opacity: 0.8;
+				width: 104px;
+				height: 102px;
+				display: block;
+				position: absolute;
+				background-size: cover;
+				mix-blend-mode: lighten;
+				background-repeat: no-repeat;
+				background-image: url('../../images/bg-pattern-quotation.svg');
+
+				@include abstracts.medium-device-max {
+					top: 20px;
+					right: 20px;
+				}
+
+				@include abstracts.big-device {
+					top: 0;
+					right: 60px;
+				}
+			}
 		}
 		&:nth-of-type(2) {
 			background-color: abstracts.$grey-500;
@@ -101,32 +124,12 @@ body {
 			margin-top: abstracts.$spacing-200;
 			.highlight {
 				@include abstracts.text-preset-1;
+				display: block;
 			}
 			.quote-text {
 				@include abstracts.text-preset-3;
+				display: block;
 				margin-top: abstracts.$spacing-200;
-			}
-		}
-
-		.testimonial-card-bg-img {
-			position: absolute;
-
-			mix-blend-mode: lighten;
-			opacity: 0.8;
-
-			@include abstracts.small-device {
-				top: 20px;
-				right: 20px;
-			}
-
-			@include abstracts.medium-device {
-				top: 20px;
-				right: 20px;
-			}
-
-			@include abstracts.big-device {
-				top: 0;
-				right: 60px;
 			}
 		}
 	}
